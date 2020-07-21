@@ -105,3 +105,78 @@ console.log(a)
     a = 'b' -> error, 'cause it's an assignment to a constant variable
     console.log(a)
 */
+
+
+/*
+    7. Object structuring
+*/
+
+let bar = 'bar'
+let baz = 'baz'
+
+//Before (ES5)
+let qux = {
+    bar: bar,
+    baz: baz
+}
+console.log(qux)
+
+//After
+let quux = {
+    bar,
+    baz
+}
+console.log(quux)
+
+
+/*
+    8. Arrow functions: anonymous functions which help to keep a cleaner syntax, and a not binded 'this'
+*/
+
+const names = ['foo', 'bar', 'baz', 'qux']
+
+//Before
+names.map(function (name) {
+    console.log(name)
+})
+
+//After
+names.map(name => console.log(name))
+
+/* 
+    A few more examples:
+    
+    const one = (name, age, country) => {
+        ...
+    }
+
+    const two = name => {
+        ....
+    }
+
+    const three = () => {
+        ...
+    }
+
+    const four = foo => foo * foo
+*/
+
+
+/*
+    9. Promises (asynchronism)
+*/
+
+const helloPromise = () => {
+    return new Promise((resolve, reject) => {
+        if(true) {
+            resolve('Cool!')
+        } else {
+            reject('Ups!')
+        }
+    })
+}
+
+helloPromise()
+    .then(response => console.log(response))
+    .then(() => console.log('Hey!'))
+    .catch(error => console.log(error))
