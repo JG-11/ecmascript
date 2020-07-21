@@ -180,3 +180,53 @@ helloPromise()
     .then(response => console.log(response))
     .then(() => console.log('Hey!'))
     .catch(error => console.log(error))
+
+
+/*
+    10. Classes
+*/
+
+class Calculator {
+    constructor(valueA, valueB) {
+        this.valueA = valueA
+        this.valueB = valueB
+    }
+
+    sum(one, two) {
+        this.valueA = one
+        this.valueB = two
+
+        return this.valueA + this.valueB
+    }
+}
+
+const calc = new Calculator()
+console.log(calc.sum(3, 4))
+
+
+/*
+    11. Modules
+
+    import sayHi from './module'
+
+    sayHi()
+*/
+
+
+/*
+    12. Generators
+*/
+
+function* generator() {
+    if(true) {
+        yield 'Hello'
+    }
+
+    if(true) {
+        yield 'World!'
+    }
+}
+
+const aux = generator()
+console.log(aux.next().value)
+console.log(aux.next().value)
