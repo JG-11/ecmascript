@@ -1,4 +1,4 @@
-# ECMASCRIPT
+# ECMAScript
 
 With the content in this repository, I hope to help other people and me to understand about this JavaScript standard. The content is part of a course I took on Platzi (https://platzi.com/cursos/ecmascript-6/), and an article I read on Medium (https://medium.com/codingtown/ecmascript-2020-aka-es-11-9c547f69d96f).
 
